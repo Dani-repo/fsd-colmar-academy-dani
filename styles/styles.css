@@ -80,7 +80,7 @@ nav ul li:last-child {
     padding-right: 1.5rem;
 }
 
-nav>a {
+nav > a {
     display: flex;
     align-items: center;
     /*align Title to the center of the logo */
@@ -109,7 +109,7 @@ header > div {
     direction: column;
     justify-content: space-evenly;
     height: 18rem;
-    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 header > div > h1 {

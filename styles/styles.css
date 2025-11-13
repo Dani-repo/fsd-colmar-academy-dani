@@ -39,30 +39,10 @@ nav {
     display: flex;
     grid-column: full-start / full-end;
     /* IMPORTANT: navbar user 1fr of the screen */
+    background-color: #fff;
     justify-content: space-between;
     height: 4rem;
     /* 64px/16px = 4rem */
-}
-
-/* Set up logo styles */
-.logo {
-    height: 3rem;
-    scroll-margin-left: 1.5rem;
-    /* 24px/16px = 1.5rem */
-}
-
-.logoname {
-    text-transform: uppercase;
-}
-
-.logoname-bold {
-    font-weight: bold;
-    color: #484848;
-}
-
-.logoname-light {
-    font-weight: lighter;
-    color: #aaa;
 }
 
 /* Set up navigation links' styles */
@@ -80,11 +60,39 @@ nav ul li:last-child {
     padding-right: 1.5rem;
 }
 
+nav ul li a{
+    font-size: 0.75rem;
+}
+
 nav > a {
     display: flex;
     align-items: center;
     /*align Title to the center of the logo */
 }
+
+/* Set up logo styles */
+.logo {
+    height: 3rem;
+    margin-left: 1.5rem;
+    /* 24px/16px = 1.5rem */
+}
+
+.logoname {
+    text-transform: uppercase;
+    line-height: 2rem;
+}
+
+.logoname-bold {
+    font-weight: bold;
+    color: #484848;
+}
+
+.logoname-light {
+    font-weight: lighter;
+    color: #aaa;
+}
+
+
 
 /* Set up header area */
 header {
@@ -100,16 +108,17 @@ header {
     padding: 2rem 0 2rem 1.5rem;
 }
 
-header>img {
+header > img {
     width: 100%;
+    height: auto;
 }
 
 header > div {
     display: flex;
-    direction: column;
+    flex-direction: column;
     justify-content: space-evenly;
     height: 18rem;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
 }
 
 header > div > h1 {

@@ -82,11 +82,43 @@ nav ul li:last-child {
 
 nav>a {
     display: flex;
-    align-items: center; /*align Title to the center of the logo */
+    align-items: center;
+    /*align Title to the center of the logo */
 }
 
 /* Set up header area */
+header {
+    display: flex;
+    align-items: center;
+    /* vertical allignment */
+    justify-content: center;
+    /*horizontal allignment */
+    background-color: #d8d8d8;
+}
 
+.imagecontainer {
+    padding: 2rem 0 2rem 1.5rem;
+}
+
+header>img {
+    width: 100%;
+}
+
+header > div {
+    display: flex;
+    direction: column;
+    justify-content: space-evenly;
+    height: 18rem;
+    padding-left: 1.5rem;
+}
+
+header > div > h1 {
+    font-size: xx-large;
+}
+
+header > div > h2 {
+    font-size: x-large;
+}
 
 /* hover effect for call to action link */
 

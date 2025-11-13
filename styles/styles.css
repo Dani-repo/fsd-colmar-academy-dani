@@ -123,17 +123,17 @@ header > div {
 }
 
 header > div > h1 {
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 header > div > h2 {
-    font-size: x-large;
+    font-size: large;
 }
 
 header > div > a {
     background-color: #484848;
     display: block;
-    width: 10;
+    width: 100%;
     padding: 0.5rem 0; /* top-bottom = 8px left-right= 0px */
     text-align: center;
     color: #fff;
@@ -142,7 +142,7 @@ header > div > a {
 /* hover effect for call to action link */
 header > div > a:hover {
     color: rgb(255, 255, 255, 0.5);
-    background-color: rgb(119, 110, 110);
+    background-color: rgb(72, 72, 72, 0.5);
 }
 
 /* Set up practice section */
@@ -183,6 +183,8 @@ header > div > a:hover {
     border-left: 1px solid #e7e7e7;
 }
 
+
+
 .events .event-block{
     display: grid;
     grid-template-columns: 0.35fr 0.65fr;
@@ -208,7 +210,7 @@ header > div > a:hover {
     font-size: medium;
 }
 
-.events> .event-block > .event-text {
+.events > .event-block > .event-text {
     margin: 2rem;
 }
 

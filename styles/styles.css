@@ -45,31 +45,6 @@ nav {
     /* 64px/16px = 4rem */
 }
 
-/* Set up navigation links' styles */
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    padding-right: 1rem;
-}
-
-nav ul li:last-child {
-    padding-right: 1.5rem;
-}
-
-nav ul li a{
-    font-size: 0.75rem;
-}
-
-nav > a {
-    display: flex;
-    align-items: center;
-    /*align Title to the center of the logo */
-}
-
 /* Set up logo styles */
 .logo {
     height: 3rem;
@@ -91,6 +66,33 @@ nav > a {
     font-weight: lighter;
     color: #aaa;
 }
+
+
+/* Set up navigation links' styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    padding-right: 1rem;
+}
+
+nav ul li:last-child {
+    padding-right: 1.5rem;
+}
+
+/* nav ul li a{
+    font-size: 0.75rem;
+} */
+
+nav > a {
+    display: flex;
+    align-items: center;
+    /*align Title to the center of the logo */
+}
+
 
 
 
@@ -185,7 +187,7 @@ header > div > a:hover {
 
 
 
-.events .event-block{
+.events > .event-block{
     display: grid;
     grid-template-columns: 0.35fr 0.65fr;
     border-top: 1px solid #e7e7e7;
@@ -202,11 +204,11 @@ header > div > a:hover {
     height: auto;
     margin: 1rem;    
 }
-.events > .event-block > img {
-    margin: 2rem;    
+.events > .event-block:first-child > img {
+    margin-top: 2rem;    
 }
 
-.events > .event-block:first-child > .event-text > h3 {
+.events > .event-block > .event-text > h3 {
     font-size: medium;
 }
 
@@ -235,7 +237,7 @@ footer{
     font-size: smaller;
     border-top: 1px solid #e7e7e7;
     justify-content: space-between;
-    padding: 1rem 1.5rem 2rem 0;
+    padding: 1rem 0 2rem 0;
     color: #8d8d8d;
 }
 

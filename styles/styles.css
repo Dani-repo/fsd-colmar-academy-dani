@@ -48,13 +48,12 @@ nav {
 /* Set up logo styles */
 .logo {
     height: 3rem;
-    margin-left: 1.5rem;
-    /* 24px/16px = 1.5rem */
+    margin-left: 1.5rem; /* specs=24px -- 24px/16px = 1.5rem */
 }
 
 .logoname {
     text-transform: uppercase;
-    line-height: 2rem;
+    line-height: 2rem; /* specs=32px -- 32px/16px=2rem */
 }
 
 .logoname-bold {
@@ -76,21 +75,21 @@ nav ul {
 }
 
 nav ul li {
-    padding-right: 1rem;
+    padding-right: 1rem; /* specs=16px space between items */
 }
 
 nav ul li:last-child {
-    padding-right: 1.5rem;
+    padding-right: 1.5rem; /* specs=24px space from last list item to the roght */
 }
 
-/* nav ul li a{
+nav ul li a {
     font-size: 0.75rem;
-} */
+    
+} 
 
 nav > a {
     display: flex;
-    align-items: center;
-    /*align Title to the center of the logo */
+    align-items: center; /*align Title to the center of the logo */
 }
 
 
@@ -99,39 +98,37 @@ nav > a {
 /* Set up header area */
 header {
     display: flex;
-    align-items: center;
-    /* vertical allignment */
-    justify-content: center;
-    /*horizontal allignment */
+    align-items: center; /* vertical allignment */
+    justify-content: center; /*horizontal allignment */
     background-color: #d8d8d8;
 }
 
 .imagecontainer {
-    padding: 2rem 1.5rem 2rem 1.5rem;
+    padding: 2rem 1.5rem 2rem 1.5rem; /* specs(T/R/B/L)=32px/24px/32px/24px) */
 }
 
 header > img {
-    max-width: 100%; 
-    height: auto;
+    max-width: 100%; /* to occupy the whole available space */ 
+    height: auto;   /* auto adjust according to width */
 }
 
 header > div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 18rem;
-    padding: 0 1.5rem; /* 24px/16px = 1.5rem */
+    height: 18rem;      
+    padding: 0 1.5rem; /* specs=24px -- 24px/16px=1.5rem */
 
 }
 
 header > div > h1 {
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 header > div > h2 {
     font-size: large;
 }
-
+/* Start here button */
 header > div > a {
     background-color: #484848;
     display: block;
@@ -158,14 +155,14 @@ header > div > a:hover {
     max-width: 100%;
     height: auto;
 }
+
 .practice > .practice-text{
     padding: 0 1.5rem;
 }
 
 .practice > .practice-text > h1 {
     font-size: x-large;
-    margin: 2rem 0 1.5rem 0;
-
+    margin: 2rem 0 1.5rem 0; /* specs(T/B)=32px/24px */
 }
 
 .practice > .practice-text > p {
@@ -258,21 +255,117 @@ footer > ul > li:last-child{
     margin-right: 1.5rem;
 }
 
-
 /* Hide events mobile */
-
-
+.events > .event-block > .event-img-mobile{
+        display: block;
+    }
+    
+#nav-mobile, .events > .event-block > .event-img-mobile{
+    display: none;
+}
 /** ********************** **/
 /** End of Desktop Section **/
 
-
 /* TODO */
-
 /** Start of Mobile Section **/
 /** *********************** **/
 
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
-@media screen and (max-width: 40rem) {}
+@media screen and (max-width: 40rem) {
+    nav, .practice {
+        display: none;
+    }
 
+    #nav-mobile {
+        display:flex;
+        align-items: center;
+        height: 4rem;
+        grid-column: full-start / full-end;
+        justify-content:space-around;
+    }
+    
+    header{
+        display: grid;
+        grid-column: full-start / full-end;
+    }
+
+    .imagecontainer{
+        padding: 0;
+    }
+
+    header > div{
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    header > div > h1{
+        font-size: x-large;
+        padding: 2rem 0 2rem 0rem;
+    }
+    header > div > h2{
+        font-size: large;
+        font-weight: lighter;
+        padding-bottom: 1.5rem;
+    }
+
+    header > div > a{
+        opacity: 0.5;
+    }
+
+    .events{
+        display: grid;
+        grid-column: full-start / full-end;
+    }
+
+    .events > .event-block{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 2rem 1rem;
+    }
+
+    .events > .event-block:first-child > img {
+        margin-top: 0;    
+}
+
+    .events> .event-block > .event-text{
+        width:100%;
+        height: auto;
+        padding-left: 1rem;
+    }
+
+    .events > .event-block > .event-text > h3 {
+        font-size: large;
+    }
+
+    .events > .event-block > .event-text > p,
+    .events > .event-block > .event-text > a {
+        font-size: small;
+        font-weight: lighter;
+    }
+
+
+    .events > .event-block > img{
+        display: none;
+    }
+
+    .events > .event-block > .event-img-mobile{
+        display: block;
+    }
+    
+    footer > ul{
+        display: none;
+    }
+
+    .events{
+        border-left: none;
+    }
+
+    .events > .event-block:last-child {
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+
+}
 /* *********************** */
 /** End of Mobile Section **/

@@ -94,9 +94,9 @@ nav>a {
 /* Set up header area */
 header {
     display: flex;
-    align-items: center;
+    align-items: left;
     /* vertical allignment */
-    justify-content: center;
+    
     /*horizontal allignment */
     background-color: #D8D8D8;
 }
@@ -136,8 +136,7 @@ header>div>a {
     background-color: #484848;
     display: block;
     width: 100%;
-    padding: 0.5rem 0;
-    /* top-bottom = 8px left-right= 0px */
+    padding: 0.5rem 0;    /* top-bottom = 8px left-right= 0px */
     text-align: center;
     color: #fff;
 }
@@ -151,9 +150,10 @@ header>div>a:hover {
 /* Set up practice section */
 .practice {
     display: flex;
-    justify-content: flex-start;
-    /* push content to the left */
     flex-direction: column;
+    align-items: left;
+ 
+    /* push content to the left */
 }
 
 .practice>.imagecontainer>img {
@@ -286,9 +286,17 @@ header>div>a:hover {
     margin-bottom: 1.5rem;
     /* Req: 24px bottom */
 }
+/* End of Learning section  - Desktop-view */
+
+/* Start of Thesis exhibit section  - Desktop-view */
 
 
-/* Start of footer section */
+
+/* End of Thesis exhibit section  - Desktop-view */
+
+
+/* Start of footer section  - Desktop-view */
+
 footer {
     grid-column: full-start / full-end;
     display: flex;

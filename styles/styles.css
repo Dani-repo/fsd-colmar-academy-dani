@@ -23,13 +23,33 @@ a {
     /* reset clicked link color to default browser*/
 }
 
-h1 {font-size: xx-large;}
-h2 {font-size: x-large;}
-h3 {font-size: large;}
-h4 {font-size: medium;}
-h5 {font-size: small;}
-h6 {font-size: x-small;}
-p {font-size: medium;}
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    font-size: large;
+}
+
+h4 {
+    font-size: medium;
+}
+
+h5 {
+    font-size: small;
+}
+
+h6 {
+    font-size: x-small;
+}
+
+p {
+    font-size: medium;
+}
 
 
 /* whole page is broadly divided to 6 rows of 2 columns */
@@ -103,7 +123,8 @@ nav>a {
 /* Set up header area */
 header {
     display: flex;
-    align-items: center;    /* vertical allignment */
+    align-items: center;
+    /* vertical allignment */
     background-color: #D8D8D8;
 }
 
@@ -126,14 +147,10 @@ header>div {
     align-items: center;
     height: 18rem;
     padding-right: 2rem;
-    /* padding: 0 1.5rem;*/
     /* specs=24px -- 24px/16px=1.5rem */
 }
+
 /*
-header>div>h2 {
-    font-size: large;
-}
-    */
 
 /* Start here button */
 header>div>a {
@@ -171,13 +188,11 @@ header>div>a:hover {
 }
 
 .practice>.practice-text>h2 {
-  /*  font-size: x-large; */
     margin: 2rem 0 1.5rem 0;
     /* specs(T/B)=32px/24px */
 }
 
 .practice>.practice-text>p {
-  /*  font-size: small; */
     font-weight: lighter;
 }
 
@@ -214,11 +229,6 @@ header>div>a:hover {
 .events>.event-block:first-child>img {
     margin-top: 2rem;
 }
-/*
-.events>.event-block>.event-text>h3 {
-    font-size: medium;
-}
-    */
 
 .events>.event-block>.event-text {
     margin: 2rem;
@@ -226,12 +236,10 @@ header>div>a:hover {
 
 .events>.event-block>.event-text>a {
     color: #3434c6;
- /*   font-size: small; */
 }
 
 .events>.event-block>.event-text>p {
     margin: 0.5rem 0;
- /*   font-size: small;*/
 }
 
 /* Start of Learning section */
@@ -275,21 +283,18 @@ header>div>a:hover {
 }
 
 .course-text>h3 {
- /*   font-size: large; */
     font-weight: bold;
     margin-top: 1rem;
     /* Req: 16px from image*/
 }
 
 .course-text>h4 {
- /*   font-size: small; */
     font-weight: lighter;
     margin: 0.5rem 0;
     /* Req: 8px top/bottom */
 }
 
 .course-text p {
- /*   font-size: x-small; */
     font-weight: lighter;
     margin-bottom: 1.5rem;
     /* Req: 24px bottom */
@@ -299,22 +304,24 @@ header>div>a:hover {
 
 /* Start of Thesis exhibit section  - Desktop-view */
 
-.thesis-exhibit{
+.thesis-exhibit {
     grid-column: full-start / full-end;
     /* this to set the span for thesis-exhibit to use the whole width */
 }
+
 .thesis-exhibit>h2 {
     text-align: center;
-    margin: 2rem 0;  /* Req(t/b): 32px  */
+    margin: 2rem 0;     /* Req(t/b): 32px  */
     border: 2px solid blue;
 }
+
 .exhibits {
     display: grid;
-    grid-template-columns: 60% 40%; /* Req ratio 60%-40% */
-    column-gap: 1.5rem; /* Req horizontal gap : 24px */
+    grid-template-columns: 60% 40%;    /* Req ratio 60%-40% */
+    column-gap: 1.5rem;    /* Req horizontal gap : 24px */
     align-items: start;
-    grid-template-rows: 1fr 1fr; 
-    margin: 0 1rem;  /* Req: 24px from the left */
+    grid-template-rows: 1fr 1fr;
+    margin: 0 1rem;    /* Req: 24px from the left */
 }
 
 
@@ -324,9 +331,18 @@ header>div>a:hover {
     padding-left: 1.5rem;
 }
 
-.left-exhibit > video {
+.left-exhibit>video {
     width: 100%;
     height: auto;
+}
+.left-exhibit>h3 {
+    text-align:left ;
+    padding: 1.5rem 0 0.5rem 0;  /* Req(t/b): 24px/8px,  */
+}
+
+.left-exhibit>p {
+    text-align:left ;
+    padding: 0 0 2rem 0; /* Req:32px from footer */
 }
 
 .right-exhibit {
@@ -336,46 +352,30 @@ header>div>a:hover {
     padding-right: 1rem;
 }
 
-.right-exhibit > .exhibit-card {
-    display:grid;
-    grid-template-columns: 35% 65%;
+.right-exhibit>.exhibit-card {
+    display: grid;
+    grid-template-columns: minmax(0, 35%) minmax(0, 65%);
     gap: 1rem;
     align-items: center;
     border: 1px solid blue;
 }
 
-.right-exhibit > .exhibit-card:first-child {
+.right-exhibit>.exhibit-card:first-child {
     background-color: #D8D8D8;
 }
 
-.right-exhibit > .exhibit-card > img {
+.right-exhibit>.exhibit-card>img {
     max-width: 100%;
     height: auto;
     padding: 1rem 1rem;
 }
 
-.right-exhibit > .exhibit-card> .exhibit-text {
+.right-exhibit>.exhibit-card>.exhibit-text {
     padding: 0 1rem;
-    max-width:fit-content;
+    max-width: fit-content;
     border: 1px solid blue;
 }
 
-.right-exhibit > .exhibit-card> .exhibit-text h3 {
-  /*  font-size: large; */
-}
-
-.right-exhibit > .exhibit-card> .exhibit-text p {
-  /*  font-size: medium; */
-}
-
-/*
-.right-exhibit > * {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 1.5rem;
-    align-items: start;
-}
-*/
 
 /* End of Thesis exhibit section  - Desktop-view */
 
@@ -386,7 +386,6 @@ footer {
     grid-column: full-start / full-end;
     display: flex;
     flex-direction: row;
-  /*  font-size: smaller; */
     border-top: 1px solid #e7e7e7;
     justify-content: space-between;
     padding: 1rem 0 2rem 0;
@@ -460,12 +459,11 @@ footer>ul>li:last-child {
     }
 
     header>div>h1 {
-      /*  font-size: x-large; */
+
         padding: 2rem 0 2rem 0rem;
     }
 
     header>div>h3 {
-     /*   font-size: large; */
         font-weight: lighter;
         padding-bottom: 1.5rem;
     }
@@ -495,13 +493,9 @@ footer>ul>li:last-child {
         padding-left: 1rem;
     }
 
-    .events>.event-block>.event-text>h3 {
-     /*   font-size: large; */
-    }
 
     .events>.event-block>.event-text>p,
     .events>.event-block>.event-text>a {
-     /*   font-size: small; */
         font-weight: lighter;
     }
 
@@ -582,15 +576,10 @@ footer>ul>li:last-child {
     .course-group p {
         display: none;
     }
-/*
-    .course-text {
-        font-size: xx-large;
-    }
-        */
+
 
     .course-text>h3 {
         display: block;
-     /*   font-size: large;*/
         width: 100%;
         padding: 1rem 0 1rem 1rem;
         /* Req: 16px/na/24px/16px bottom padding is adjusted to 16px */
@@ -598,10 +587,34 @@ footer>ul>li:last-child {
         background-color: #D8D8D8;
         border: 1px solid blue;
     }
+
+    .left-exhibit>h3,
+    .left-exhibit>p,
+    .right-exhibit {
+        display: none;
+    }
+
+    .exhibits {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .left-exhibit {
+        padding:0 0 1.5rem 0;
+        margin: 0;
+    }
+
+    .left-exhibit video {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+
+    }
+
 }
-
-
-
 
 /* *********************** */
 /** End of Mobile Section **/

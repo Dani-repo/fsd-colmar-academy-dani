@@ -22,13 +22,30 @@ a {
     /* reset clicked link color to default browser's*/
 }
 /* set default fontsize for h1~h6 once */
-h1 {font-size: xx-large; font-weight: bold;}
-h2 {font-size: x-large; font-weight: bold;}
-h3 {font-size: large; font-weight: medium;}
-h4 {font-size: medium; font-weight: light;}
-p {font-size: medium; font-weight: light;}
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+}
 
-/* The body is broadly divided to 6 rows of 2 columns */
+h2 {
+    font-size: x-large; 
+    font-weight: bold;
+}
+
+h3 {
+    font-size: large; 
+    font-weight: medium;
+}
+h4 {
+    font-size: medium; 
+    font-weight: light;
+}
+p {
+    font-size: medium; 
+    font-weight: light;
+}
+
+/* The body is broadly divided into 6 rows of 2 columns */
 /* the effects need to be canceled out in section where the placement and ratio is different */
 .container {
     display: grid;
@@ -160,6 +177,7 @@ header>div>a:hover {
 .events {
     display: grid;
     grid-template-rows: repeat(3, min-content);
+    /* set grid for 3 rows, allow shrinking to minimum size without causing overflow  */
     border-left: 1px solid #E7E7E7;     /* Req.=16px from left border to image */
 }
 
@@ -449,10 +467,9 @@ footer>ul>li:last-child {
         border-bottom: 1px solid #E7E7E7;   /* display thin line for bottom border */
     }
     /* Set up learning section -----------------------------------------------*/
-    /* ---------------------------------------------------------------------------- */
     /* The following spacing properties have been previously set in Desktop view: */
     /* For easier editing and troubleshooting the following section is added */
-    /* to cancel/reset the spacing that were previously done in Desktop-view */
+    /* to cancel/reset the spacing that were previously set in Desktop-view */
     .learning-title>h2 {
         padding: 0 0
     }
@@ -528,7 +545,7 @@ footer>ul>li:last-child {
         padding: 1rem 0;
     }
 
-      footer>ul {
+    footer>ul {
         display: none;  /* hide footer list (Terms, Privacy) */
     }
     

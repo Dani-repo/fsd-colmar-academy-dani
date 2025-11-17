@@ -180,15 +180,14 @@ header > div > a:hover {
 /* Set up events section -----------------------------------------------*/
 .events {
     display: grid;
-    grid-template-rows: repeat(3, min-content);
-    /* set grid for 3 rows, allow shrinking to minimum size without causing overflow  */
-    border-left: 1px solid #E7E7E7;     /* Req.=16px from left border to image */
+    border-left: 1px solid #E7E7E7;    
 }
 
 .events .event-block {
     display: grid;
     grid-template-columns: 0.35fr 0.65fr; /* Req.= ratio: image 35% - text 65% */
-    border-top: 1px solid #E7E7E7;  /* Req.=16px from top border to image */
+    max-height: max-content;
+    border-top: 1px solid #E7E7E7;  
     align-items: center;
 }
 
@@ -234,8 +233,6 @@ header > div > a:hover {
 
 .course-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* fit as many columns as possible in to the grid, do not shrink < 200px  */
     grid-template-rows: 1fr 1fr;
     /* set 2 rows of equal height */
     gap: 2rem 2rem; /* Req.= 32px top/bottom gap between courses */

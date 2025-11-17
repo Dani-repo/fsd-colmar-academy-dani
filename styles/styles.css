@@ -235,6 +235,7 @@ header > div > a:hover {
     display: grid;
     grid-template-rows: 1fr 1fr;
     /* set 2 rows of equal height */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem 2rem; /* Req.= 32px top/bottom gap between courses */
     padding: 2rem 6rem; /* Req.= 32px/72px/32px/72px */
 }

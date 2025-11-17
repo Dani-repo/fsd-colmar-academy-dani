@@ -1,5 +1,5 @@
 /* Reset CSS */
-/* Universal selector (*) targets every element (regardless of tag, Id, class) */
+/* Universal selector (*) targets every element (regardless of tag, id, class) */
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ a {
     color: inherit;
     /* reset clicked link color to default browser's*/
 }
-/* set default fontsize for h1~h6 once */
+/* set default fontsize for h1~h6 once; font-size property is only invoked when necessary */
 h1 {
     font-size: xx-large;
     font-weight: bold;
@@ -36,17 +36,19 @@ h3 {
     font-size: large; 
     font-weight: medium;
 }
+
 h4 {
     font-size: medium; 
     font-weight: light;
 }
+
 p {
     font-size: medium; 
     font-weight: light;
 }
 
 /* The body is broadly divided into 6 rows of 2 columns */
-/* the effects need to be canceled out in section where the placement and ratio is different */
+/* the effects need to be canceled out in sections where the placement and ratio is different */
 .container {
     display: grid;
     grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr [full-end];
@@ -60,9 +62,11 @@ p {
 nav {
     display: flex;
     grid-column: full-start / full-end;
+    /* navbar grid occupies the entire available width */
     background-color: #FFFFFF;
     justify-content: space-between;
-    height: 4rem;   /* Requirements=64px -- 64px/16px = 4rem */
+    /* even space between items */
+    height: 4rem;   /* Requirements (Req.)=64px -- 64px/16px = 4rem */
 }
 
 /* Set up logo styles */
@@ -101,9 +105,9 @@ nav ul li:last-child {
     padding-right: 1.5rem;  /* Req.=24px space from last list item to the right */
 }
 
-nav>a {
+nav > a {
     display: flex;
-    align-items: center;    /* align Title to the center of the logo */
+    align-items: center;    /* align Title vertically to the center of the logo */
 }
 
 /* Set up header area */
@@ -117,12 +121,12 @@ header {
     padding: 2rem 1.5rem 2rem 1.5rem;   /* Req.= (t/r/b/l) 32px/24px/32px/24px */
 }
 
-header>img {
+header > img {
     max-width: 100%;    /* to occupy the whole available space */
     height: auto;       /* auto adjust according to width */
 }
 
-header>div {
+header > div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -132,7 +136,7 @@ header>div {
 }
 
 /* Start here button */
-header>div>a {
+header > div > a {
     background-color: #484848;
     display: block;
     width: 100%;
@@ -142,7 +146,7 @@ header>div>a {
 }
 
 /* hover effect for call to action link */
-header>div>a:hover {
+header > div > a:hover {
     color: rgb(255, 255, 255, 0.5);
     background-color: rgb(72, 72, 72, 0.5);
 }
@@ -154,20 +158,20 @@ header>div>a:hover {
     align-items: left;  /* push content to the left */
 }
 
-.practice>.imagecontainer>img {
+.practice > .imagecontainer > img {
     max-width: 100%;
     padding-bottom: 0; /* Req.=32px from image to bottom border */
 }
 
-.practice>.practice-text {
+.practice > .practice-text {
     padding-left: 1.5rem;   /* Req.=32px to left border */
 }
 
-.practice>.practice-text>h2 {
+.practice > .practice-text > h2 {
     margin-bottom: 1.5rem;    /* Req.=24px to text paragraph */
 }
 
-.practice>.practice-text>p>span {
+.practice > .practice-text > p > span {
     display: block;
     font-weight: medium;
     padding: 2rem 0;        /* Req.=32px */
@@ -192,26 +196,25 @@ header>div>a:hover {
     background-color: #D8D8D8;
 }
 
-.events>.event-block>img {
+.events > .event-block > img {
     max-width: 100%;
     height: auto;
     margin: 1rem 1rem;   /* Req.=16px from top/left border to image */
 }
 
-
-.events>.event-block:first-child>img {
+.events > .event-block:first-child > img {
     margin-top: 2rem;
 }
 
-.events>.event-block>.event-text {
+.events > .event-block > .event-text {
     margin: 0 1rem 0 2rem;
 }
 
-.events>.event-block>.event-text>a {
+.events > .event-block > .event-text > a {
     color: #3434c6;
 }
 
-.events>.event-block>.event-text>p {
+.events > .event-block > .event-text > p {
     margin: 0.5rem 0;   /* Req.=8px top/left before/after this paragraph */
 }
 
@@ -224,7 +227,7 @@ header>div>a:hover {
     background-color: #D8D8D8;
 }
 
-.learning-title>h2 {
+.learning-title > h2 {
     padding-top: 2rem;  /* Req.= 32px top */
     text-align: center;
 }
@@ -253,12 +256,12 @@ header>div>a:hover {
     text-align: left;
 }
 
-.course-text>h3 {
+.course-text > h3 {
   /*  */  font-weight: bold;
     margin-top: 1rem;   /* Req.=16px from image*/
 }
 
-.course-text>h4 {
+.course-text > h4 {
   /*  */  font-weight: lighter;
     margin: 0.5rem 0;   /* Req.=8px top/bottom from other text */
 }
@@ -275,7 +278,7 @@ header>div>a:hover {
     /* this to set the grids/columns to use the whole width */
 }
 
-.thesis-exhibit>h2 {
+.thesis-exhibit > h2 {
     text-align: center;
     margin: 2rem 0; /* Req.= 32px from top border and bottom (exhibits) */
 }
@@ -289,17 +292,17 @@ header>div>a:hover {
     margin: 0 1.5rem; /* Req.= 24px from the left border*/
 }
 
-.left-exhibit>video {
+.left-exhibit > video {
     width: 100%;
     height: auto;
 }
 
-.left-exhibit>h3 {
+.left-exhibit > h3 {
     text-align: left;
     padding: 1.5rem 0 0.5rem 0;/* Req.=(t/b) 24px/8px */
 }
 
-.left-exhibit>p {
+.left-exhibit > p {
     text-align: left;
     padding-bottom: 2rem;    /* Req:32px from footer */
 }
@@ -312,7 +315,7 @@ header>div>a:hover {
     padding-right: 1rem;
 }
 
-.right-exhibit>.exhibit-card {
+.right-exhibit > .exhibit-card {
     display: grid;
     grid-template-columns: 35fr 65fr;
     /* set 2 column for each exhibit card: image 35fr - 65fr text */
@@ -321,17 +324,17 @@ header>div>a:hover {
     align-items: center;
 }
 
-.right-exhibit>.exhibit-card:first-child {
+.right-exhibit > .exhibit-card:first-child {
     background-color: #D8D8D8;  /* background color of the 1st right-exhibit */
 }
 
-.right-exhibit>.exhibit-card>img {
+.right-exhibit > .exhibit-card > img {
     max-width: 100%;
     height: auto;
     padding: 1rem; /* Req.=16px */
 }
 
-.right-exhibit>.exhibit-card>.exhibit-text {
+.right-exhibit > .exhibit-card > .exhibit-text {
     padding: 0 1rem;
     max-width: fit-content;
 }
@@ -348,30 +351,30 @@ footer {
     color: #8D8D8D;
 }
 
-footer>p {
+footer > p {
     margin-left: 1.5rem;    /* Req.=24px from left border */
 }
 
-footer>ul {
+footer > ul {
     display: flex;
     list-style: none;
 }
 
-footer>ul>li {
+footer > ul > li {
     margin-right: 1rem;
 }
 
-footer>ul>li:last-child {
+footer > ul > li:last-child {
     margin-right: 1.5rem;
 }
 
 /* Hide events mobile */
-.events>.event-block>.event-image-mobile {
+.events > .event-block > .event-image-mobile {
     display: block;
 }
 
 #nav-mobile,
-.events>.event-block>.event-image-mobile {
+.events > .event-block > .event-image-mobile {
     display: none;
 }
 
@@ -393,9 +396,9 @@ footer>ul>li:last-child {
         display: flex;
         align-items: center;
         height: 4rem;   /* Req.=64px height */
-        grid-column: full-start / full-end;
-        /* columns to occupy whole row area */
-        justify-content: space-around; /* equal gaps in between columns */
+        grid-column: full-start / full-end; /* columns to occupy whole row area */
+        justify-content: space-around; 
+        /* even space between items, half-space to the left/right border */
     }
 
     header {
@@ -408,22 +411,22 @@ footer>ul>li:last-child {
         padding: 0; /* no gap around image */
     }
     /* Set up header section -----------------------------------------------*/
-    header>div {
+    header > div {
         display: block;
         width: auto;
         height: auto;
         padding: 2rem 1rem; /* Req.=32px for top/bottom, 16px from left border */
     }
 
-    header>div>h1 {
+    header  > div > h1 {
         padding-bottom: 2rem;  /* Req.=32px to next text (h3) */
     }
 
-    header>div>h3 {
+    header > div > h3 {
         padding-bottom: 1.5rem; /* Req.=24px to call to action button */
     }
 
-    header>div>a {
+    header > div > a {
         opacity: 0.5;   /* 50% opacity upon mouse hover */
     }
     /* Set up event section -----------------------------------------------*/
@@ -433,28 +436,28 @@ footer>ul>li:last-child {
         /* columns to occupy whole row area */
     }
 
-    .events>.event-block {
+    .events > .event-block {
         display: flex;
         flex-direction: column;
         /* items in event-block (image and text) to flex to single column when collapsing */
         padding: 1rem 1rem 2rem 1rem;   /* Req.=(t/r/b/l) 16px/16px/32px/16px */
     }
 
-    .events>.event-block:first-child>img {
+    .events > .event-block:first-child > img {
         margin-top: 0;  /* no margin to the top border is required. */
     }
 
-    .events>.event-block>.event-text {
+    .events > .event-block > .event-text {
         width: 100%;
         height: auto;
         padding-left: 1rem; /* Req.=16px, indent text 16px */
     }
 
-    .events>.event-block>img {
+    .events > .event-block > img {
         display: none;  /* hide desktop-view images for events */
     }
 
-    .events>.event-block>.event-image-mobile {
+    .events > .event-block > .event-image-mobile {
         display: block; /* display mobile-view images for events */
     }
 
@@ -462,15 +465,15 @@ footer>ul>li:last-child {
         border-left: none;  /* hide event border line */
     }
 
-    .events>.event-block:last-child {
+    .events > .event-block:last-child {
         background-color: #FFFFFF;  /* set background color of last even to full white */
         border-bottom: 1px solid #E7E7E7;   /* display thin line for bottom border */
     }
     /* Set up learning section -----------------------------------------------*/
-    /* The following spacing properties have been previously set in Desktop view: */
-    /* For easier editing and troubleshooting the following section is added */
-    /* to cancel/reset the spacing that were previously set in Desktop-view */
-    .learning-title>h2 {
+    
+    /* Some spacing properties (margin/padding/gap) have been previously set in Desktop view: */
+    /* The following section is added to cancel/reset the spacing that were previously set in Desktop-view */
+    .learning-title > h2 {
         padding: 0 0
     }
 
@@ -479,9 +482,10 @@ footer>ul>li:last-child {
         padding: 0 0
     }
 
-    .course-text, .course-text>h3 {
+    .course-text, .course-text > h3 {
         margin: 0 0;
     }
+    /* End of property reset section */
 
     .learning {
         background-color: #FFFFFF;
@@ -489,7 +493,7 @@ footer>ul>li:last-child {
         border: 1px solid #E7E7E7; /* thin line for borders */
     }
 
-    .learning>.learning-title>h2 {
+    .learning > .learning-title > h2 {
         padding-bottom:  1rem; /* Req.= 16px from bottom */
         text-align: center;
     }
@@ -508,10 +512,10 @@ footer>ul>li:last-child {
     .course-group img,
     .course-group h4,
     .course-group p {
-        display: none;
+        display: none;  /* hide course image and texts */
     }
 
-    .course-text>h3 {
+    .course-text > h3 {
         display: flex;
         /* display course names only */
         font-size:larger;
@@ -521,16 +525,16 @@ footer>ul>li:last-child {
         background-color: #D8D8D8;
     }
     /* Set up exhibit section -----------------------------------------------*/
-    .left-exhibit>h3,
-    .left-exhibit>p,
+    .left-exhibit > h3,
+    .left-exhibit > p,
     .right-exhibit {
-        display: none;
+        display: none;  /* hide exhibit texts */
     }
 
     .exhibits {
         grid-template-columns: 1fr;
         margin: 0;
-        padding-bottom: 1.5rem;
+        padding-bottom: 1.5rem; /* Req.=24px to footer */
     }
 
     .left-exhibit video {
@@ -541,11 +545,11 @@ footer>ul>li:last-child {
     
     /* Set up footer section -----------------------------------------------*/
     footer {
-        border-top: none;
-        padding: 1rem 0;
+        border-top: none; /* set the border-top line invisible */
+        padding: 1rem 0;  /* Req.= (t/b) 16px */
     }
 
-    footer>ul {
+    footer > ul {
         display: none;  /* hide footer list (Terms, Privacy) */
     }
     

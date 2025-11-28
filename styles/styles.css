@@ -203,7 +203,7 @@ header > div > a:hover {
 }
 
 .events > .event-block:first-child > img {
-    margin-top: 2rem;
+    margin-top: 2rem;   /* Req.=32px from top to 1st card (excluding padding for image) */
 }
 
 .events > .event-block > .event-text {
@@ -236,7 +236,10 @@ header > div > a:hover {
     display: grid;
     grid-template-rows: 1fr 1fr;
     /* set 2 rows of equal height */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    /* set 3 columns, each grid = 200px (min) to 1fr (max) */
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* set number of column to be auto-fit, each grid is 200px minimum to the max of 1fr */
     gap: 2rem 2rem; /* Req.= 32px top/bottom gap between courses */
     padding: 2rem 6rem; /* Req.= 32px/72px/32px/72px */
 }
@@ -556,3 +559,4 @@ footer > ul > li:last-child {
 
 /* *********************** */
 /** End of Mobile Section **/
+
